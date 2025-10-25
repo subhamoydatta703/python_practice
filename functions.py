@@ -86,7 +86,7 @@ def show_list(lst):
     print(lst)
 
 my_list = [1, 2, 3]
-show_list(my_list)
+# show_list(my_list)
 
 # method 2:
 
@@ -94,7 +94,8 @@ def show_items(*args):
     print(args)
 
 my_list = [1, 2, 3]
-show_items(my_list)
+# show_items(my_list)
+
 
 
 

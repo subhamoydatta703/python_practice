@@ -43,4 +43,64 @@ def currConverter(val):
     INR= val * 87.82
     return round(INR, 2)
 
-print(currConverter(6))
+# print(currConverter(6))
+
+# sum of first n natural numbers
+
+def sum(n):
+    if n==0 or n==1:
+        return n
+    else:
+        return n + sum(n-1)
+    
+# print(sum(5))
+
+# sum of digits
+
+def sumDigits(n):
+    if n==0 or n==1:
+        return n
+    else:
+        temp2=n%10
+        n = n//10
+        return temp2 + sumDigits(n)
+# print(sumDigits(123))
+
+# Fibonacci series
+
+def fab(n):
+    if n==0 or n==1:
+        return n
+    else:
+        return fab(n-1)+fab(n-2)
+    
+# print(fab(3))
+
+# reverse a string
+def revStr(str1):
+    print(str1[::-1])
+
+# revStr("Python")
+    
+# Sum of elements at even indices of a list
+
+def sumEvenIdx(items):
+    sum =0
+    for i in range(len(items)):
+        if(i%2==0):
+            sum = sum + items[i]
+    print(sum)
+
+lst =[1,2,3,4,5]
+
+# power
+def pow(n, x):
+    if( n==0 or n==1):
+        return n
+    elif(x==0):
+        return 1
+    else:
+        return n * pow(n, x-1)
+    
+print(pow(3, 3))
+    

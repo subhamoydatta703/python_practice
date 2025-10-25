@@ -1,0 +1,10 @@
+s=" SUbHaMoY "
+print(s.lower())
+print(s.upper())
+print(s.capitalize())
+print(len(s))
+print(s.strip())
+print(s.replace("SUbHaMoY", "yoyo"))
+print(s.split())
+print(s.find("M"))
+print(s.count("o"))

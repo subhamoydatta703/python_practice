@@ -91,7 +91,7 @@ def sumEvenIdx(items):
             sum = sum + items[i]
     print(sum)
 
-lst =[1,2,3,4,5]
+
 
 # power
 def pow(n, x):
@@ -102,5 +102,16 @@ def pow(n, x):
     else:
         return n * pow(n, x-1)
     
-print(pow(3, 3))
+# print(pow(3, 3))
+
+# recursion to print elements of a list
+
+def elm(items, i):
+    if(i==len(items)):
+        return
+    print(items[i], end=" ")
+    elm(items, i+1)
     
+lst =[1,2,3,4,5]
+
+elm(lst, 0)

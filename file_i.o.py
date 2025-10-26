@@ -1,13 +1,4 @@
-# | Mode   | Meaning      | Description                                                                    |
-# | ------ | ------------ | ------------------------------------------------------------------------------ |
-# | `'r'`  | Read         | Opens file for reading (default). Error if file doesn’t exist.                 |
-# | `'w'`  | Write        | Opens file for writing, **creates** a new file or **overwrites** existing.     |
-# | `'a'`  | Append       | Opens file for writing but **adds** content to the end instead of overwriting. |
-# | `'x'`  | Create       | Creates new file, **error** if file already exists.                            |
-# | `'b'`  | Binary       | Opens file in **binary mode** (useful for images, PDFs).                       |
-# | `'t'`  | Text         | Opens file in **text mode** (default).                                         |
-# | `'r+'` | Read + Write | Opens file for both reading and writing.                                       |
-
+import os
 # Opening a File
 
 # To work with a file, you must first open it using the built-in open() function.
@@ -22,14 +13,14 @@
 
 # Reads the entire file as one string.
 
-file=open("demo.txt", "r")
+# file=open("demo.txt", "r")
 # print(file.read()) #read whole file
 # print(file.read(5)) #read first 5 characters
 
 # readline()
 # Reads one line at a time.
 # print(file.readline()) #read line by line 
-file.close()
+# file.close()
 
 #  Writing to a File
 
@@ -106,5 +97,54 @@ file.close()
 # using with syntax:
 # The with statement automatically closes the file after use — even if an error occurs.
 
-with open("demo.txt", "r") as f:
-    print(f.read())
+# with open("demo.txt", "r") as f:
+#     print(f.read())
+
+ 
+# OS module:
+
+# The os module provides functions to interact with the operating system.
+
+# You can do things like:
+
+# Create, delete, or rename files and directories
+
+# Check file existence
+
+# Get the current working directory
+
+# Work with paths
+
+# Run system commands
+
+# Import it first:
+
+# import os
+
+# os.remove("demo.txt")
+
+# os.remove("demo.txt") Deletes the file "demo.txt" from your system.
+
+# Important: only works for files, not folders.
+
+# After this, the file is permanently removed.
+
+# os.path.exists("demo.txt") Checks if a file or folder exists at the given path.
+
+# Returns:
+
+# True → file/folder exists
+
+# False → file/folder does not exist
+
+if os.path.exists("demo.txt"):
+    os.remove("demo.txt")
+    print("File deleted successfully")
+else:
+    print("File does not exist")
+
+
+
+
+
+

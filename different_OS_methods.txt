@@ -1,0 +1,55 @@
+# Working with Directories
+
+| Method                 | Description                       | Example                              |
+| ---------------------- | --------------------------------- | ------------------------------------ |
+| `os.getcwd()`          | Get **current working directory** | `print(os.getcwd())`                 |
+| `os.chdir(path)`       | **Change current directory**      | `os.chdir("C:/Users/User/Desktop")`  |
+| `os.listdir(path=".")` | List files & folders in directory | `print(os.listdir())`                |
+| `os.mkdir(path)`       | Create a **new folder**           | `os.mkdir("NewFolder")`              |
+| `os.makedirs(path)`    | Create **nested folders**         | `os.makedirs("Folder1/SubFolder")`   |
+| `os.rmdir(path)`       | Delete **empty folder**           | `os.rmdir("NewFolder")`              |
+| `os.removedirs(path)`  | Delete **nested empty folders**   | `os.removedirs("Folder1/SubFolder")` |
+| `os.rename(old, new)`  | Rename a file or folder           | `os.rename("old.txt","new.txt")`     |
+
+# Working with Files
+
+| Method                  | Description                      | Example                       |
+| ----------------------- | -------------------------------- | ----------------------------- |
+| `os.remove(path)`       | Delete a **file**                | `os.remove("demo.txt")`       |
+| `os.path.exists(path)`  | Check if file/folder exists      | `os.path.exists("demo.txt")`  |
+| `os.path.isfile(path)`  | Check if path is a **file**      | `os.path.isfile("demo.txt")`  |
+| `os.path.isdir(path)`   | Check if path is a **directory** | `os.path.isdir("C:/Users")`   |
+| `os.path.getsize(path)` | Get **size of file** in bytes    | `os.path.getsize("demo.txt")` |
+
+# Working with Paths
+
+| Method                         | Description                   | Example                                                |
+| ------------------------------ | ----------------------------- | ------------------------------------------------------ |
+| `os.path.join(path, filename)` | Safely join path and filename | `os.path.join("C:/Users","demo.txt")`                  |
+| `os.path.split(path)`          | Split into (folder, file)     | `os.path.split("C:/Users/demo.txt")`                   |
+| `os.path.basename(path)`       | Get file name                 | `os.path.basename("C:/Users/demo.txt")` → `"demo.txt"` |
+| `os.path.dirname(path)`        | Get folder name               | `os.path.dirname("C:/Users/demo.txt")` → `"C:/Users"`  |
+| `os.path.splitext(path)`       | Get (filename, extension)     | `os.path.splitext("demo.txt")` → `("demo", ".txt")`    |
+
+
+# Miscellaneous / System Commands
+
+| Method               | Description                                         | Example                         |
+| -------------------- | --------------------------------------------------- | ------------------------------- |
+| `os.system(command)` | Run system command                                  | `os.system("notepad.exe")`      |
+| `os.name`            | Shows OS type (`'nt'`=Windows, `'posix'`=Linux/Mac) | `print(os.name)`                |
+| `os.environ`         | Get environment variables                           | `print(os.environ["USERNAME"])` |
+| `os.urandom(n)`      | Generate **random bytes**                           | `os.urandom(8)`                 |
+
+
+# Notes & Tips
+
+Use os.path.exists() before deleting anything to avoid errors.
+
+os.remove() → files only
+
+os.rmdir() → empty folders only
+
+shutil.rmtree() → folder with all contents
+
+Use os.path.join() for cross-platform paths (Windows/Linux/Mac).

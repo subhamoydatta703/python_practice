@@ -23,5 +23,7 @@
 # Reads the entire file as one string.
 
 file=open("demo.txt", "r")
-print(file.read())
+# print(file.read()) #read whole file
+# print(file.read(5)) #read first 5 characters
+# print(file.readline()) #read line by line 
 file.close()

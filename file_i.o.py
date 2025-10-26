@@ -98,9 +98,13 @@ file.close()
 
 # If you write something, it overwrites existing content from the start.
 
-file = open("demo.txt", "r+")
-print(file.read())
-print(file.write("hello....I'm subhamoy"))
-file.close()
+# file = open("demo.txt", "r+")
+# print(file.read())
+# print(file.write("hello....I'm subhamoy"))
+# file.close()
 
+# using with syntax:
+# The with statement automatically closes the file after use — even if an error occurs.
 
+with open("demo.txt", "r") as f:
+    print(f.read())

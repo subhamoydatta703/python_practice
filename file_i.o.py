@@ -1,4 +1,4 @@
-import os
+# import os
 # Opening a File
 
 # To work with a file, you must first open it using the built-in open() function.
@@ -137,11 +137,11 @@ import os
 
 # False → file/folder does not exist
 
-if os.path.exists("demo.txt"):
-    os.remove("demo.txt")
-    print("File deleted successfully")
-else:
-    print("File does not exist")
+# if os.path.exists("demo.txt"):
+#     os.remove("demo.txt")
+#     print("File deleted successfully")
+# else:
+#     print("File does not exist")
 
 
 

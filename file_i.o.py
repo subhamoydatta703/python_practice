@@ -25,5 +25,30 @@
 file=open("demo.txt", "r")
 # print(file.read()) #read whole file
 # print(file.read(5)) #read first 5 characters
+
+# readline()
+# Reads one line at a time.
 # print(file.readline()) #read line by line 
 file.close()
+
+#  Writing to a File
+
+# You can create or overwrite files using 'w'. 
+# it also returns the number of characters written to the file.
+
+# file=open("demo.txt", "w")
+
+# print(file.write("Hey bro< it's SD"))
+
+
+# file.close()
+
+# Appending to a File
+
+# Appending means adding new content without deleting old data.
+
+f = open("demo.txt", "a")
+f.write("\nAdding another line!")
+f.close()
+
+

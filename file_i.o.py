@@ -14,3 +14,14 @@
 # Syntax:
 # file = open("filename", "mode")
 
+# Reading from a File
+
+# You can read file content in several ways.
+
+# (a) read()
+
+# Reads the entire file as one string.
+
+file=open("demo.txt", "r")
+print(file.read())
+file.close()

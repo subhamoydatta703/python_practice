@@ -100,6 +100,22 @@
 # with open("demo.txt", "r") as f:
 #     print(f.read())
 
+
+# tell() tells you the current position of the cursor/pointer.
+
+# seek() moves the cursor/pointer to a different position.
+
+# read() or write() changes the cursor/pointer position automatically as you read or write.
+
+# f = open("data.txt", "r")
+# print(f.read(5))    # reads 5 characters
+# print(f.tell())     # shows current position of the pointer
+# f.seek(0)           # moves the pointer to start
+# print(f.read(10))   # reads 10 chars from start
+# f.close()
+
+
+
  
 # OS module:
 

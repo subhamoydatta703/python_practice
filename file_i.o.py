@@ -47,8 +47,27 @@ file.close()
 
 # Appending means adding new content without deleting old data.
 
-f = open("demo.txt", "a")
-f.write("\nAdding another line!")
-f.close()
+# f = open("demo.txt", "a")
+# f.write("\nAdding another line!")
+# f.close()
 
+# "r+" means read and write mode.
+
+# It allows you to:
+# Read from a file
+# Write (or modify) data in the same file
+# But — the file must already exist (else you’ll get an error).
+
+# Syntax:
+# file = open("demo.txt", "r+")
+
+# How it works:
+
+# When you open a file with "r+",
+# the file pointer starts at the beginning of the file.
+# If you write something, it overwrites existing content from the start.
+
+file = open("demo.txt", "r+")
+print(file.write("Hello"))
+file.close()
 

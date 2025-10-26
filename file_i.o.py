@@ -67,7 +67,40 @@ file.close()
 # the file pointer starts at the beginning of the file.
 # If you write something, it overwrites existing content from the start.
 
+# file = open("demo.txt", "a+")
+# print(file.read())
+# print(file.write("Subhamoy Datta...."))
+# file.close()
+
+# | Mode | Read | Write | File must exist? | Overwrites?               | Pointer starts at |
+# | ---- | ---- | ----- | ---------------- | ------------------------- | ----------------- |
+# | `r`  | ✅    | ❌     | ✅                | ❌                         | Start             |
+# | `w`  | ❌    | ✅     | ❌ (creates new)  | ✅                         | Start             |
+# | `a`  | ❌    | ✅     | ❌ (creates new)  | ❌ (adds at end)           | End               |
+# | `r+` | ✅    | ✅     | ✅                | ✅ (from pointer position) | Start             |
+# | `w+` | ✅    | ✅     | ❌ (creates new)  | ✅                         | Start             |
+# | `a+` | ✅    | ✅     | ❌ (creates new)  | ❌ (adds at end)           | End               |
+
+# "r+" means read and write mode.
+
+# It allows you to:
+# Read from a file
+# Write (or modify) data in the same file
+# But — the file must already exist (else you’ll get an error).
+
+# Syntax:
+# file = open("demo.txt", "r+")
+
+# How it works:
+
+# When you open a file with "r+",
+# the file pointer starts at the beginning of the file.
+
+# If you write something, it overwrites existing content from the start.
+
 file = open("demo.txt", "r+")
-print(file.write("Hello"))
+print(file.read())
+print(file.write("hello....I'm subhamoy"))
 file.close()
+
 

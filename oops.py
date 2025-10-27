@@ -55,3 +55,5 @@ p1 = Person("Subhamoy")
 
 print(p1.name)      # Object attribute -> unique for p1
 print(p1.species)   # Class attribute -> same for everyone
+
+# priority= object attribute > class attribute

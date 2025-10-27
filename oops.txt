@@ -30,3 +30,10 @@ s1 = Student()
 In Python, self refers to the current object of the class.
 You don’t write self when creating an object because Python adds it automatically behind the scenes.
 s1 = Student("Subhamoy", 24) **Note: don’t need to write s1 = Student(self, "Subhamoy", 24) because self is added by Python automatically.
+
+# class and object attrubute:
+
+| Type                 | Defined Where                          | Accessed By                                 | Shared or Unique          |
+| -------------------- | -------------------------------------- | ------------------------------------------- | ------------------------- |
+| **Class Attribute**  | Inside class, **outside `__init__()`** | `ClassName.attribute` or `object.attribute` | 🔁 Shared by all objects  |
+| **Object Attribute** | Inside `__init__()` using `self.`      | `object.attribute`                          | 🎯 Unique for each object |

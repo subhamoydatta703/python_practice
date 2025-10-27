@@ -42,3 +42,16 @@ class Person:
 p1= Person("Rahul")
 p1.sound()
 print(p1.name)
+
+class Person:
+    species = "Human"   # Class attribute
+
+    def __init__(self, name):
+        self.name = name  # Object attribute
+
+# Create two objects
+p1 = Person("Subhamoy")
+
+
+print(p1.name)      # Object attribute -> unique for p1
+print(p1.species)   # Class attribute -> same for everyone

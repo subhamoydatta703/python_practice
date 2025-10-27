@@ -36,7 +36,8 @@
 class Person:
     def __init__(self, name):
         self.name = name
-
+# Here sound() is a method that belongs to this object
+#methods are the functions that were written inside a class
     def sound(self):  # 'self' here refers to the same object that was created using __init__()
         print(self.name,"talk....")
 p1= Person("Rahul")
@@ -57,3 +58,22 @@ print(p1.name)      # Object attribute -> unique for p1
 print(p1.species)   # Class attribute -> same for everyone
 
 # priority= object attribute > class attribute
+
+class Student:
+    def __init__(self, name):   # this is a method (constructor)
+        self.name = name
+
+    def greet(self):            # this is also a method
+        print("Hello,", self.name)
+
+# creating an object of the class
+s1 = Student("Subhamoy")
+
+# calling the method
+s1.greet()
+
+# def greet(self): → is a method (a function inside the class).
+
+# self refers to the current object (s1 here).
+
+# When we call s1.greet(), it prints Hello, Subhamoy.

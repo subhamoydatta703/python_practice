@@ -37,3 +37,26 @@ s1 = Student("Subhamoy", 24) **Note: don’t need to write s1 = Student(self, "S
 | -------------------- | -------------------------------------- | ------------------------------------------- | ------------------------- |
 | **Class Attribute**  | Inside class, **outside `__init__()`** | `ClassName.attribute` or `object.attribute` | 🔁 Shared by all objects  |
 | **Object Attribute** | Inside `__init__()` using `self.`      | `object.attribute`                          | 🎯 Unique for each object |
+
+A method in Python is a function that is written inside a class.
+It is used to perform actions using the data and attributes of that class.
+Every method has at least one parameter — self, which refers to the current object of the class.
+
+class Student:
+    def __init__(self, name):   # this is a method (constructor)
+        self.name = name
+
+    def greet(self):            # this is also a method
+        print("Hello,", self.name)
+
+# creating an object of the class
+s1 = Student("Subhamoy")
+
+# calling the method
+s1.greet()
+
+# def greet(self): → is a method (a function inside the class).
+
+# self refers to the current object (s1 here).
+
+# When we call s1.greet(), it prints Hello, Subhamoy.

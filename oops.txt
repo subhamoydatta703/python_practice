@@ -1,0 +1,32 @@
+A constructor is a special function in a class that is automatically called when an object is created.
+In Python, the constructor is defined using the __init__() method.
+It is used to initialize (set) the values or data of an object at the time of creation.
+The first parameter of a constructor is always self, which refers to the current object.
+
+__init__() is used for:
+
+Assigning values to variables (attributes) of an object when it is created.
+
+ Example:
+class Student:
+    def __init__(self, name, roll):
+        self.name = name     # assigning value to object variable
+        self.roll = roll     # assigning value to object variable
+
+s1 = Student("Subhamoy", 54)
+print(s1.name)   # Subhamoy
+print(s1.roll)   # 54
+
+The __init__() function always takes at least one parameter — self, which refers to the current object being created.
+It allows the class to access and assign values to the object’s variables.
+Using self, we can store data separately for each object.
+ Example:
+class Student:
+    def __init__(self):
+        print("Object created!")
+
+s1 = Student()
+
+In Python, self refers to the current object of the class.
+You don’t write self when creating an object because Python adds it automatically behind the scenes.
+s1 = Student("Subhamoy", 24) **Note: don’t need to write s1 = Student(self, "Subhamoy", 24) because self is added by Python automatically.

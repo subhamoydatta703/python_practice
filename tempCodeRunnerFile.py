@@ -1,4 +1,7 @@
-file = open("demo.txt", "r+")
-# print(file.read())
-# print(file.write("hello....I'm subhamoy"))
-# file.close()
+acc.credit(5000)
+# print(acc.bal)
+
+# acc.debit(2000)
+# acc.debit(1000)
+
+# print(acc.bal)

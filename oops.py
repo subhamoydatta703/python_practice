@@ -92,17 +92,17 @@
 #     @staticmethod
 #     def method_name():
 
-class Human:
-    def __init__(self, name):
-        self.name=name
+# class Human:
+#     def __init__(self, name):
+#         self.name=name
 
-    @staticmethod #@staticmethod is a decorator
-    def prop():
-        print("Humans have hand, legs, face, etc.")
+#     @staticmethod #@staticmethod is a decorator
+#     def prop():
+#         print("Humans have hand, legs, face, etc.")
 
-h1 = Human("Rohit")
-print(h1.name)
-h1.prop()
+# h1 = Human("Rohit")
+# print(h1.name)
+# h1.prop()
 
 # A decorator is a special function that adds extra features to another function or method —
 # without changing its actual code.
@@ -154,18 +154,18 @@ h1.prop()
 
 # Decorator
 
-def decorator_func(func):     # func = greet
-    def wrapper():            # wrapper is a NEW function
-        print("Start")        # runs first
-        func()                # runs the real greet()
-        print("End")          # runs last
-    return wrapper            # send wrapper back
+# def decorator_func(func):     # func = greet
+#     def wrapper():            # wrapper is a NEW function
+#         print("Start")        # runs first
+#         func()                # runs the real greet()
+#         print("End")          # runs last
+#     return wrapper            # send wrapper back
 
-@decorator_func
-def greet():
-    print("Hello!")
+# @decorator_func
+# def greet():
+#     print("Hello!")
 
-greet()
+# greet()
 
 # How it works
 
@@ -193,3 +193,22 @@ greet()
 # func → becomes greet
 
 # So inside the decorator, func() → actually means greet()
+
+# Abstraction
+
+class  Car:
+    def __init__(self):
+        self.acc=False
+        self.clutch = False
+    def start(self):
+        self.acc=True
+        self.clutch= True
+        print("Car started...")
+
+c1 = Car()
+c1.start()
+
+# When we call c1.start(), we only see the important action — “Car started...”.
+# We don’t see the internal details like how self.acc and self.clutch became True.
+
+# This is called abstraction — hiding unnecessary details and showing only the essential part.

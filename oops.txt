@@ -125,3 +125,79 @@ That means:
 func → becomes greet
 
 So inside the decorator, func() → actually means greet()
+
+The 4 pillars of OOP (Object-Oriented Programming) are:
+
+🧱 Encapsulation
+
+Meaning: Wrapping data (variables) and methods (functions) into a single unit — called a class.
+
+Purpose: To protect data from being accessed directly; instead, it’s accessed through methods.
+
+Example:
+
+class Student:
+    def __init__(self, name):
+        self.__name = name   # private variable
+    
+    def get_name(self):
+        return self.__name
+
+
+Here, __name is hidden (encapsulated) inside the class.
+
+🧬 Abstraction
+
+Meaning: Hiding complex details and showing only the necessary parts.
+
+Purpose: To make code simpler and easier to use.
+
+Example:
+When you call print(), you don’t need to know how it prints — only that it prints.
+
+👨‍👩‍👧‍👦 Inheritance
+
+Meaning: One class (child) can use properties and methods of another class (parent).
+
+Purpose: To reuse code and avoid duplication.
+
+Example:
+
+class Animal:
+    def speak(self):
+        print("Sound")
+
+class Dog(Animal):
+    pass
+
+d = Dog()
+d.speak()  # Output: Sound
+
+
+🌀 Polymorphism
+
+Meaning: "Many forms" — the same function name can behave differently based on the object that calls it.
+
+Purpose: To make code more flexible.
+
+Example:
+
+class Dog:
+    def speak(self):
+        print("Bark")
+
+class Cat:
+    def speak(self):
+        print("Meow")
+
+for animal in [Dog(), Cat()]:
+    animal.speak()
+
+
+Both use the same speak() method but behave differently.
+
+In short:
+➡️ Encapsulation – Data hiding
+➡️ Abstraction – Showing only essentials
+➡️ Inheritance – Code reusability
+➡️ Polymorphism – One name, many forms

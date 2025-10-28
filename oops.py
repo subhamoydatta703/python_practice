@@ -96,10 +96,100 @@ class Human:
     def __init__(self, name):
         self.name=name
 
-    @staticmethod
+    @staticmethod #@staticmethod is a decorator
     def prop():
         print("Humans have hand, legs, face, etc.")
 
 h1 = Human("Rohit")
 print(h1.name)
 h1.prop()
+
+# A decorator is a special function that adds extra features to another function or method —
+# without changing its actual code.
+
+# Example (simple view)
+
+# Suppose you have a normal function:
+
+# def greet():
+#     print("Hello!")
+
+
+# Now you want to add something extra, like a message before and after it.
+# You can do it using a decorator.
+
+# Basic Decorator Example:
+# def decorator_func(func):
+#     def wrapper():
+#         print("Before the function runs")
+#         func()
+#         print("After the function runs")
+#     return wrapper
+
+# @decorator_func
+# def greet():
+#     print("Hello!")
+
+# greet()
+
+
+# Output:
+
+# Before the function runs
+# Hello!
+# After the function runs
+
+
+# @decorator_func means → greet = decorator_func(greet)
+
+# So the decorator wraps the greet() function and adds new behavior before and after it.
+
+# In OOP:
+
+# Decorators like @staticmethod or @classmethod are built-in decorators that change how a method behaves:
+
+# @staticmethod → makes a method independent of object (self)
+
+# @classmethod → passes cls (class) instead of self
+
+# Decorator
+
+def decorator_func(func):     # func = greet
+    def wrapper():            # wrapper is a NEW function
+        print("Start")        # runs first
+        func()                # runs the real greet()
+        print("End")          # runs last
+    return wrapper            # send wrapper back
+
+@decorator_func
+def greet():
+    print("Hello!")
+
+greet()
+
+# How it works
+
+# When we write:
+
+# def decorator_func(func):
+
+
+# 👉 that func is a parameter — it will receive the function you decorate.
+
+# So if you write:
+
+# @decorator_func
+# def greet():
+#     print("Hello!")
+
+
+# Then behind the scenes, Python does this:
+
+# greet = decorator_func(greet)
+
+
+# That means:
+
+# func → becomes greet
+
+# So inside the decorator, func() → actually means greet()

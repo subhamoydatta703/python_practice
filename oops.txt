@@ -60,3 +60,68 @@ s1.greet()
 # self refers to the current object (s1 here).
 
 # When we call s1.greet(), it prints Hello, Subhamoy.
+
+
+# Decorator:
+
+#Input:
+def decorator_func(func):
+    def wrapper():
+        print("🚀 Starting function...")
+        func()
+        print("✅ Function finished!")
+    return wrapper
+
+@decorator_func
+def greet():
+    print("Hello, Subhamoy!")
+
+greet()
+
+# Output:
+
+🚀 Starting function...
+Hello, Subhamoy!
+✅ Function finished!
+
+# Note – Decorator in Python
+
+A decorator is used to add extra functionality to a function without changing its actual code.
+It works like a wrapper that can run some code before or after the main function runs.
+
+When we write @decorator_func above a function, it tells Python that the function below should use that decorator.
+So basically, it enhances the function’s behavior while keeping it clean and unchanged.
+
+Example:
+
+@decorator_func
+def greet():
+    print("Hello!")
+
+
+Here, @decorator_func adds something extra to greet() — before or after it runs.
+
+When we write:
+
+def decorator_func(func):
+
+
+👉 that func is a parameter — it will receive the function you decorate.
+
+So if you write:
+
+@decorator_func
+def greet():
+    print("Hello!")
+
+
+Then behind the scenes, Python does this:
+
+greet = decorator_func(greet)
+
+
+That means:
+
+func → becomes greet
+
+So inside the decorator, func() → actually means greet()

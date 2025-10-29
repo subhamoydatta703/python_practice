@@ -1,3 +1,5 @@
+Constructor:
+
 A constructor is a special function in a class that is automatically called when an object is created.
 In Python, the constructor is defined using the __init__() method.
 It is used to initialize (set) the values or data of an object at the time of creation.

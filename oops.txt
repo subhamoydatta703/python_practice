@@ -229,24 +229,35 @@ There are 3 types of variables in Python classes:
 self.balance = 1000
 
 
-✅ Access directly:
+✅ Access directly (Public)
 
-print(acc.balance)
+self.balance = 1000
+print(acc.balance)   # ✅ Accessible directly
 
-2. Protected → meant to be used only inside the class or its child classes (by convention)
+
+2️⃣ Protected → meant to be used only inside the class or its child classes (by convention)
+
 self._balance = 1000
 
 
-🟡 You can still access it like acc._balance,
-but the single underscore _ means “please don’t touch this directly” — a warning for developers, not a strict rule.
+🟡 You can still access it like:
 
-3. Private → truly hidden from outside the class
+print(acc._balance)
+
+
+But the single underscore _ means “please don’t touch this directly” — it’s just a warning for developers, not a strict rule.
+
+3️⃣ Private → truly hidden from outside the class
+
 self.__balance = 1000
 
 
-🚫 You can’t access it directly using acc.__balance.
+🚫 You can’t access it directly using:
+
+print(acc.__balance)   # ❌ Error
+
+
 ✅ You must use a method:
 
-acc.get_balance()
-
-💬 In short:
+print(acc.get_balance())   # ✅ Correct way
+💬

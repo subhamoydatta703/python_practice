@@ -62,16 +62,27 @@ class House:
         self.doors = True
 
 class Building(House):
+    # def __init__(self, room):
     def __init__(self):
         # super().__init__() → calls House.__init__() → sets windows=True, doors=True
         super().__init__()  # call House constructor
         self.color= "blue"
         
-b1 = Building()
+        
+class BigRoom(Building):
+    # def __init__(self,room, size):
+    def __init__(self, size):
+        super().__init__()
+        self.size=size
+# b1 = Building()
 
-print(b1.doors)
-print(b1.color)
+# print(b1.doors)
+# print(b1.color)
 
+r1 = BigRoom(35)
+print(r1.doors)
+print(r1.size)
+print(r1.color)
         
 
 

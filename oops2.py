@@ -105,13 +105,6 @@ class Child(Father, Mother):
 c = Child()
 c.skills()
 
-# Explanation:
-
-# The Child class inherits from two parent classes → Father and Mother.
-
-# So this is multiple inheritance.
-
-# You can call both parents’ methods (like shown above), or override them completely.
 
 
 

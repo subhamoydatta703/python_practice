@@ -79,11 +79,42 @@ class BigRoom(Building):
 # print(b1.doors)
 # print(b1.color)
 
-r1 = BigRoom(35)
-print(r1.doors)
-print(r1.size)
-print(r1.color)
+# r1 = BigRoom(35)
+# print(r1.doors)
+# print(r1.size)
+# print(r1.color)
         
+# Multiple inheritance -> one child class got more than one parent class's properties
+
+class Father:
+    def skills(self):
+        print("Can drive and repair things")
+
+class Mother:
+    def skills(self):
+        print("Can cook and paint")
+
+# Child inherits from BOTH Father and Mother
+class Child(Father, Mother):
+    def skills(self):
+        # call both parents’ versions
+        Father.skills(self)
+        Mother.skills(self)
+        print("Also good at coding!")
+
+c = Child()
+c.skills()
+
+# Explanation:
+
+# The Child class inherits from two parent classes → Father and Mother.
+
+# So this is multiple inheritance.
+
+# You can call both parents’ methods (like shown above), or override them completely.
+
+
+
 
 
 

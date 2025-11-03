@@ -54,98 +54,119 @@
 
 # inheritance -> inherit the properties from parent class to child class
 
-# syntax -> another_class another_class_name(parent_class):
+# # syntax -> another_class another_class_name(parent_class):
 
-class House:
-    def __init__(self):
-        self.windows = True
-        self.doors = True
+# class House:
+#     def __init__(self):
+#         self.windows = True
+#         self.doors = True
 
-class Building(House):
-    # def __init__(self, room):
-    def __init__(self):
-        # super().__init__() → calls House.__init__() → sets windows=True, doors=True
-        super().__init__()  # call House constructor
-        self.color= "blue"
+# class Building(House):
+#     # def __init__(self, room):
+#     def __init__(self):
+#         # super().__init__() → calls House.__init__() → sets windows=True, doors=True
+#         super().__init__()  # call House constructor
+#         self.color= "blue"
         
         
-class BigRoom(Building):
-    # def __init__(self,room, size):
-    def __init__(self, size):
-        super().__init__()
-        self.size=size
-# b1 = Building()
+# class BigRoom(Building):
+#     # def __init__(self,room, size):
+#     def __init__(self, size):
+#         super().__init__()
+#         self.size=size
+# # b1 = Building()
 
-# print(b1.doors)
-# print(b1.color)
+# # print(b1.doors)
+# # print(b1.color)
 
-# r1 = BigRoom(35)
-# print(r1.doors)
-# print(r1.size)
-# print(r1.color)
+# # r1 = BigRoom(35)
+# # print(r1.doors)
+# # print(r1.size)
+# # print(r1.color)
         
-# Multiple inheritance -> one child class got more than one parent class's properties
+# # Multiple inheritance -> one child class got more than one parent class's properties
 
-# class Father:
-#     def skills(self):
-#         print("Can drive and repair things")
+# # class Father:
+# #     def skills(self):
+# #         print("Can drive and repair things")
 
-# class Mother:
-#     def skills(self):
-#         print("Can cook and paint")
+# # class Mother:
+# #     def skills(self):
+# #         print("Can cook and paint")
 
-# # Child inherits from BOTH Father and Mother
-# class Child(Father, Mother):
-#     def skills(self):
-#         # call both parents’ versions
-#         Father.skills(self)
-#         Mother.skills(self)
-#         print("Also good at coding!")
+# # # Child inherits from BOTH Father and Mother
+# # class Child(Father, Mother):
+# #     def skills(self):
+# #         # call both parents’ versions
+# #         Father.skills(self)
+# #         Mother.skills(self)
+# #         print("Also good at coding!")
 
-# c = Child()
-# c.skills()
+# # c = Child()
+# # c.skills()
 
 
-# sometimes we want a method that works for the whole class, not just one object.
-# For that, we use @classmethod.
-# @classmethod -> It can access and modify class-level variables, but not instance variables directly.
+# # sometimes we want a method that works for the whole class, not just one object.
+# # For that, we use @classmethod.
+# # @classmethod -> It can access and modify class-level variables, but not instance variables directly.
 
-# Syntax
-# class ClassName:
+# # Syntax
+# # class ClassName:
+# #     @classmethod
+# #     def method_name(cls, args):
+# #         
+
+# class Student:
+#     school_name = "Brainware University"
+
+#     def __init__(self, name):
+#         self.name = name
+
 #     @classmethod
-#     def method_name(cls, args):
-#         
-
-class Student:
-    school_name = "Brainware University"
-
-    def __init__(self, name):
-        self.name = name
-
-    @classmethod
-    def change_school(cls, new_name):
-        cls.school_name = new_name
+#     def change_school(cls, new_name):
+#         cls.school_name = new_name
 
 
-# Creating objects
-s1 = Student("Subhamoy")
+# # Creating objects
+# s1 = Student("Subhamoy")
 
-print(s1.school_name)   # Brainware University
+# print(s1.school_name)   # Brainware University
 
-# Changing class variable using classmethod
-Student.change_school("IIT Madras Online BS")
-
+# # Changing class variable using classmethod
 # Student.change_school("IIT Madras Online BS")
 
-# Here’s what’s happening:
+# # Student.change_school("IIT Madras Online BS")
 
-# Student → means we are calling the method using the class, not an object.
+# # Here’s what’s happening:
 
-# .change_school → this is the method we want to run.
+# # Student → means we are calling the method using the class, not an object.
 
-# "IIT Madras Online BS" → this is the new name we are passing to the method.
+# # .change_school → this is the method we want to run.
 
-print(s1.school_name) 
+# # "IIT Madras Online BS" → this is the new name we are passing to the method.
+
+# print(s1.school_name) 
+
+# @property
+
+# @property in Python lets you use a function like a normal variable.
+# You don’t need brackets () when using it.
+
+# It’s used when you want to show a value that is calculated from other values, but you want it to look simple and clean like a normal variable.
+
+class std:
+    def __init__(self, phy, chem, math):
+        self.phy = phy
+        self.chem= chem
+        self.math = math
+    @property 
+    def percentage(self):
+        return str((self.phy+self.chem+self.math)/3) + '%'
+    
+s1 = std(99, 95, 100)
+
+print(s1.percentage)
+
 
 
 

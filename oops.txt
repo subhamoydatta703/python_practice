@@ -358,3 +358,14 @@ class Student:
 cls means the class itself (like Student).
 
 @classmethod tells Python this method works for the class.
+
+@property is used when you want to use a method like a variable.
+
+Normally, when you make a method, you call it like this:
+
+object.method()
+
+
+But with @property, you can call it like a variable:
+
+object.method   # no brackets

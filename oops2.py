@@ -86,27 +86,66 @@ class BigRoom(Building):
         
 # Multiple inheritance -> one child class got more than one parent class's properties
 
-class Father:
-    def skills(self):
-        print("Can drive and repair things")
+# class Father:
+#     def skills(self):
+#         print("Can drive and repair things")
 
-class Mother:
-    def skills(self):
-        print("Can cook and paint")
+# class Mother:
+#     def skills(self):
+#         print("Can cook and paint")
 
-# Child inherits from BOTH Father and Mother
-class Child(Father, Mother):
-    def skills(self):
-        # call both parents’ versions
-        Father.skills(self)
-        Mother.skills(self)
-        print("Also good at coding!")
+# # Child inherits from BOTH Father and Mother
+# class Child(Father, Mother):
+#     def skills(self):
+#         # call both parents’ versions
+#         Father.skills(self)
+#         Mother.skills(self)
+#         print("Also good at coding!")
 
-c = Child()
-c.skills()
+# c = Child()
+# c.skills()
 
 
+# sometimes we want a method that works for the whole class, not just one object.
+# For that, we use @classmethod.
+# @classmethod -> It can access and modify class-level variables, but not instance variables directly.
 
+# Syntax
+# class ClassName:
+#     @classmethod
+#     def method_name(cls, args):
+#         
+
+class Student:
+    school_name = "Brainware University"
+
+    def __init__(self, name):
+        self.name = name
+
+    @classmethod
+    def change_school(cls, new_name):
+        cls.school_name = new_name
+
+
+# Creating objects
+s1 = Student("Subhamoy")
+
+print(s1.school_name)   # Brainware University
+
+# Changing class variable using classmethod
+Student.change_school("IIT Madras Online BS")
+
+# Student.change_school("IIT Madras Online BS")
+
+# Here’s what’s happening:
+
+# Student → means we are calling the method using the class, not an object.
+
+# .change_school → this is the method we want to run.
+
+# "IIT Madras Online BS" → this is the new name we are passing to the method.
+
+print(s1.school_name) 
 
 
 

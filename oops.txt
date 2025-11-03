@@ -321,3 +321,40 @@ c.skills()
 # So this is multiple inheritance.
 
 # You can call both parents’ methods (like shown above), or override them completely.
+
+1. Normal method (with self)
+
+When you create a normal method inside a class, it works for one object.
+
+class Student:
+    def __init__(self, name):
+        self.name = name
+
+    def show_name(self):
+        print("Student name:", self.name)
+
+s1 = Student("Subhamoy")
+s1.show_name()     # works for one student
+
+
+ Here, self means the object (like s1).
+So it shows that student’s name only.
+
+ 2. Class method (with @classmethod)
+
+Now, sometimes we want a method that works for the whole class, not just one object.
+For that, we use @classmethod.
+
+Let’s see a simple example 👇
+
+class Student:
+    school_name = "Brainware University"   # common for all
+
+    @classmethod
+    def change_school(cls, new_name):
+        cls.school_name = new_name
+
+
+cls means the class itself (like Student).
+
+@classmethod tells Python this method works for the class.

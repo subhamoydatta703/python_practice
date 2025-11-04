@@ -368,4 +368,5 @@ object.method()
 
 But with @property, you can call it like a variable:
 
-object.method   # no brackets
+object.method   
+# no brackets

@@ -370,3 +370,9 @@ But with @property, you can call it like a variable:
 
 object.method   
 # no brackets
+
+# Polymorphism
+It allows the same operator or function name to work in different ways depending on the data type or object it is used with.
+# Example
+print(10 + 5)       # Adds numbers
+print("Hi" + "Bye") # Joins strings

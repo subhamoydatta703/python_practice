@@ -1,0 +1,65 @@
+Exception handling means managing errors that happen during program execution so the program doesn’t crash.
+It lets your program detect, handle, and recover from unexpected situations.
+
+An exception is an error that occurs while a program is running.
+When Python faces something it cannot handle, it throws (raises) an exception.
+
+Example:
+print(10 / 0)
+
+
+Output:
+
+ZeroDivisionError: division by zero
+
+
+Here, dividing by zero causes a ZeroDivisionError — an exception.
+
+Why Use Exception Handling?
+
+To avoid sudden program crashes
+
+To give user-friendly error messages
+
+To control what happens when something goes wrong
+
+Syntax
+
+try:
+    # code that might cause an error
+except:
+    # code that runs if there is an error
+
+Example
+
+try:
+    num = int(input("Enter a number: "))
+    print(10 / num)
+except ZeroDivisionError:
+    print("You can’t divide by zero!")
+except ValueError:
+    print("That’s not a number!")
+
+How It Works
+
+Python runs the code inside the try block.
+
+If no error → it skips the except part.
+
+If error occurs → it jumps to the matching except block.
+
+Program continues running normally.
+
+| **Exception Name**      | **When it Happens**                         | **Example**                             |
+| ----------------------- | ------------------------------------------- | --------------------------------------- |
+| **`ZeroDivisionError`** | Dividing a number by zero                   | `10 / 0`                                |
+| **`ValueError`**        | When the data type is wrong                 | `int("abc")`                            |
+| **`TypeError`**         | Operation between wrong data types          | `10 + "5"`                              |
+| **`NameError`**         | Using a variable that isn’t defined         | `print(x)` (when x isn’t defined)       |
+| **`IndexError`**        | Accessing a list index that doesn’t exist   | `a = [1,2,3]` → `a[5]`                  |
+| **`KeyError`**          | Using a dictionary key that doesn’t exist   | `d = {"name": "Subhamoy"}` → `d["age"]` |
+| **`FileNotFoundError`** | Trying to open a file that doesn’t exist    | `open("abc.txt")` (if file not found)   |
+| **`AttributeError`**    | Trying to use an undefined method/attribute | `"hello".push()`                        |
+| **`ImportError`**       | Importing a module that doesn’t exist       | `import notamodule`                     |
+| **`IndentationError`**  | Wrong spacing in code                       | missing or extra spaces                 |
+| **`SyntaxError`**       | Wrong Python syntax                         | `if True print("Hi")`                   |

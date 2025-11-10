@@ -11,3 +11,7 @@ You are saying:
 
  It does NOT make a new data type.
  It just gives a new name to an existing one.
+
+ ype Vector = list[float] → Type Definition (creates a new type alias)
+
+n: int = 5 / function hints → Type Annotation / Hint, not a definition

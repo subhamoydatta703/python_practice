@@ -85,5 +85,15 @@ def func():
 
 # func() 
 
+# without enumerate*()
 
+lst1 = [1, 3, 5, 7]
+index = 0
+# for items in lst1:
+    # print(f"At index {index}, item is {items}")
+    # index += 1
 
+# enumerate()
+lst = [2, 5, 6, 8]
+# for index, items in enumerate(lst):
+    # print(f"At index {index}, item is {items}")

@@ -15,3 +15,28 @@ You are saying:
  ype Vector = list[float] → Type Definition (creates a new type alias)
 
 n: int = 5 / function hints → Type Annotation / Hint, not a definition
+
+| Term                | What it means                                             | Example                                |
+| ------------------- | --------------------------------------------------------- | -------------------------------------- |
+| **Type Hint**       | The syntax to specify a type                              | `x: int`                               |
+| **Type Annotation** | Another word for type hint (same thing)                   | `def f(x: int) -> int:`                |
+| **Type Checking**   | The process of verifying types using tools                | e.g. `mypy file.py`                    |
+| **Type Alias**      | Giving a new name to a type                               | `type Vector = list[float]`            |
+| **Typing Module**   | The Python module that provides all type-related features | `from typing import List, Dict, Union` |
+
+
+Union means “either this type or that type.”
+
+It tells Python (and the programmer) that a variable, parameter, or return value
+can belong to more than one possible data type — but only one at a time.
+
+ 
+Example:
+
+from typing import Union
+
+x: Union[int, str]  # x can be an int or a string
+
+x = 5        # valid
+x = "hello"  # valid
+x = 5.2      # invalid (float not allowed)

@@ -1,0 +1,13 @@
+type → creates a nickname (alias)
+
+When you write:
+
+type Vector = list[float]
+
+
+You are saying:
+
+“Whenever I write the word Vector, it means a list of floats.”
+
+ It does NOT make a new data type.
+ It just gives a new name to an existing one.

@@ -26,7 +26,7 @@ def scale(s: float, v:vector)->vector:
     return [s*num for num in v]
 
 v1: vector = [1.0, 2.0, 3.0]
-print(scale(2.0, v1))
+# print(scale(2.0, v1))
 
 # using typing module(advanced type hinting)
 
@@ -97,3 +97,18 @@ index = 0
 lst = [2, 5, 6, 8]
 # for index, items in enumerate(lst):
     # print(f"At index {index}, item is {items}")
+
+
+# without list comprehension
+numbers = [1, 2, 3, 4, 5]
+squares = []
+
+for num in numbers:
+    squares.append(num ** 2)
+
+# print(squares)
+
+# with list comprehension
+num = [2, 4, 6, 8]
+sq_num = [i*i for i in num]
+# print(sq_num)

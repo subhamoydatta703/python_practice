@@ -51,9 +51,25 @@ x: Number = 10
 y: Number = 5.5
 
 # Using and printing them
-print("Vector 1:", v1)
-print("Vector 2:", v2)
-print("User 1:", user1)
-print("User 2:", user2)
-print("Marks:", marks)
-print("x + y =", x + y)
+# print("Vector 1:", v1)
+# print("Vector 2:", v2)
+# print("User 1:", user1)
+# print("User 2:", user2)
+# print("Marks:", marks)
+# print("x + y =", x + y)
+
+# Dictionary merge operator( | )
+
+dict1 = {"a": 1, "b": 2}
+dict2 = {"b": 3, "c": 4}
+
+result = dict1 | dict2
+# print(result)
+
+# Dictionary Update Operator( |= )
+
+ict1 = {"a": 1, "b": 2}
+dict2 = {"b": 3, "c": 4}
+
+dict1 |= dict2 #update the value of b in dict 1(dict2 overwrites the value of b in dict 1)
+print(dict1)

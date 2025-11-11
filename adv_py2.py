@@ -23,7 +23,7 @@ evens = list(filter(list_even, lst))
 
 def sum(a, b):
     return a+b
-print(reduce(sum, lst))
+# print(reduce(sum, lst))
 
 # working of reduce() ->
 # lst = [1, 2, 3, 4] 

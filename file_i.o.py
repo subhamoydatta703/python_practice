@@ -63,6 +63,12 @@
 # print(file.write("Subhamoy Datta...."))
 # file.close()
 
+# with
+
+# with open("file_name", "mode") as f:
+    # data = f.read() or f.write()
+    # print(data)
+
 # | Mode | Read | Write | File must exist? | Overwrites?               | Pointer starts at |
 # | ---- | ---- | ----- | ---------------- | ------------------------- | ----------------- |
 # | `r`  | ✅    | ❌     | ✅                | ❌                         | Start             |

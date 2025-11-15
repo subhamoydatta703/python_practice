@@ -165,7 +165,7 @@ class std:
     
 s1 = std(99, 95, 100)
 
-print(s1.percentage)
+# print(s1.percentage)
 
 
 

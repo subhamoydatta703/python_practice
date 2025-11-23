@@ -1,6 +1,7 @@
 from collections import Counter 
 import itertools
 import statistics
+import re
 
 # count the number of each character
 # print(Counter("Subhamoy Datta  "))
@@ -30,4 +31,7 @@ hrs=[1,2,3,4,5]
 marks=[50, 60, 70, 85, 95]
 res=(statistics.linear_regression(hrs, marks))
 
-print(predict(2.5))
+# print(predict(2.5))
+
+#using re module
+print(bool(re.match(r"[^@]+@[^@]+\.[^@]+", "subhamoy@example.com"))) # checks if the email matches the regex pattern -> returns True or False

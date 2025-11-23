@@ -15,10 +15,19 @@ import statistics
 # print(list(itertools.permutations([7,8,9,10],3))) 
 
 #calculate mean value
-print(statistics.mean([1,2,3,4]))
+# print(statistics.mean([1,2,3,4]))
 
 #calculate linear regression
-x=[1,2,3,4,5]
-y=[7,8,9,5,4]
-print(statistics.linear_regression(x,y))
+def predict(x):
+    prediction = (res.slope*x)+res.intercept
+    if(prediction>=100):
+        return 100
+    else:
+        return prediction
 
+#based on hrs of study how much numbers you get
+hrs=[1,2,3,4,5] 
+marks=[50, 60, 70, 85, 95]
+res=(statistics.linear_regression(hrs, marks))
+
+print(predict(2.5))
